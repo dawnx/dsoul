@@ -1,0 +1,189 @@
+fileFormatVersion: 2
+guid: c043052c067fba5468fc4dfae135cb11
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: BarbarianPelvis
+    100002: BarbarianLThigh
+    100004: BarbarianLCalf
+    100006: BarbarianLFoot
+    100008: BarbarianRCalf
+    100010: BarbarianRFoot
+    100012: BarbarianSpine1
+    100014: BarbarianSpine2
+    100016: BarbarianRThigh
+    100018: BarbarianSpine3
+    100020: BarbarianLDigit11 1
+    100022: BarbarianRDigit31
+    100024: BarbarianRDigit11
+    100026: BarbarianLDigit31
+    100028: BarbarianLDigit13
+    100030: BarbarianRDigit22
+    100032: BarbarianLDigit12
+    100034: BarbarianLDigit11
+    100036: BarbarianLDigit22
+    100038: BarbarianLDigit21
+    100040: BarbarianRUpperarm
+    100042: BarbarianRCollarbone
+    100044: BarbarianRForearm
+    100046: BarbarianRDigit23
+    100048: BarbarianRDigit32
+    100050: BarbarianRDigit12
+    100052: Barbarian_weaponL
+    100054: BarbarianLUpperarm
+    100056: BarbarianRDigit11 1
+    100058: BarbarianRibcage
+    100060: BarbarianRDigit33
+    100062: BarbarianLForearm
+    100064: bon_gob_war_face
+    100066: BarbarianRDigit21
+    100068: BarbarianLCollarbone
+    100070: Barbarian_weaponR
+    100072: BarbarianLDigit23
+    100074: BarbarianRDigit13
+    100076: BarbarianLDigit33
+    100078: BarbarianLDigit32
+    100080: BarbarianRPalm
+    100082: BarbarianNeck
+    100084: barbarian
+    100086: BarbarianLPalm
+    100088: BarbarianHead
+    100090: bon_gob_war_jaw
+    100092: Barbariancloth_front
+    100094: Barbariancloth_back
+    100098: //RootNode
+    400000: BarbarianPelvis
+    400002: BarbarianLThigh
+    400004: BarbarianLCalf
+    400006: BarbarianLFoot
+    400008: BarbarianRCalf
+    400010: BarbarianRFoot
+    400012: BarbarianSpine1
+    400014: BarbarianSpine2
+    400016: BarbarianRThigh
+    400018: BarbarianSpine3
+    400020: BarbarianLDigit11 1
+    400022: BarbarianRDigit31
+    400024: BarbarianRDigit11
+    400026: BarbarianLDigit31
+    400028: BarbarianLDigit13
+    400030: BarbarianRDigit22
+    400032: BarbarianLDigit12
+    400034: BarbarianLDigit11
+    400036: BarbarianLDigit22
+    400038: BarbarianLDigit21
+    400040: BarbarianRUpperarm
+    400042: BarbarianRCollarbone
+    400044: BarbarianRForearm
+    400046: BarbarianRDigit23
+    400048: BarbarianRDigit32
+    400050: BarbarianRDigit12
+    400052: Barbarian_weaponL
+    400054: BarbarianLUpperarm
+    400056: BarbarianRDigit11 1
+    400058: BarbarianRibcage
+    400060: BarbarianRDigit33
+    400062: BarbarianLForearm
+    400064: bon_gob_war_face
+    400066: BarbarianRDigit21
+    400068: BarbarianLCollarbone
+    400070: Barbarian_weaponR
+    400072: BarbarianLDigit23
+    400074: BarbarianRDigit13
+    400076: BarbarianLDigit33
+    400078: BarbarianLDigit32
+    400080: BarbarianRPalm
+    400082: BarbarianNeck
+    400084: barbarian
+    400086: BarbarianLPalm
+    400088: BarbarianHead
+    400090: bon_gob_war_jaw
+    400092: Barbariancloth_front
+    400094: Barbariancloth_back
+    400098: //RootNode
+    4300000: barbarian
+    4300002: barbarian_cloth_02
+    7400000: Take 001
+    7400002: run fast
+    11100000: //RootNode
+    13700000: BarbarianPelvis
+    13700002: barbarian
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: run fast
+      takeName: 
+      firstFrame: 0
+      lastFrame: 19
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 
