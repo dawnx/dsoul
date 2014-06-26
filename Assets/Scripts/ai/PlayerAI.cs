@@ -28,7 +28,7 @@ public class PlayerAI : AbstractAI {
 		GameObjectManager.characters.Add(this.character);
         //gameObject.animation["hit"].speed = 0.25f;
         gameObject.animation["run"].speed = 1.75f;
-        getBloodBar().setName("玩家");
+        getBloodBar().setName("player");
 	}
 
     void Update() {
@@ -42,8 +42,12 @@ public class PlayerAI : AbstractAI {
 
         if (Input.GetKeyUp(KeyCode.Mouse0))
         {
-            updateDist();
-		} else if (currentState == RUN) {
+            updateDist(Input.mousePosition);
+        } 
+        else if (isTouch())
+        {
+        }
+        else if (currentState == RUN) {
 			
             // 自动找怪打
             atkTarget = getAtkTarget();
@@ -52,10 +56,22 @@ public class PlayerAI : AbstractAI {
         }
     }
 
-    void updateDist()
+    bool isTouch(){
+        //need check
+        foreach(Touch t in Input.touches){
+            if(t.phase == TouchPhase.Canceled){
+                updateDist(new Vector3(t.position.x, t.position.y, 0));
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    void updateDist(Vector3 screenPos)
     {
-        Vector3 cursorScreenPosition = Input.mousePosition;//鼠标在屏幕上的位置
-        Ray ray = Camera.main.ScreenPointToRay(cursorScreenPosition);//在鼠标所在的屏幕位置发出一条射线
+        //Vector3 cursorScreenPosition = Input.mousePosition;//鼠标在屏幕上的位置
+        Ray ray = Camera.main.ScreenPointToRay(screenPos);//在鼠标所在的屏幕位置发出一条射线
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
         {

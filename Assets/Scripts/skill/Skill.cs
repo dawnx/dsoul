@@ -10,8 +10,11 @@ public class Skill
     public int targetNumber = 0;// 目标数量
     public int atkRange = 0;//攻击范围
     public int cd = 0;//count down 单位秒
-    public string clip = "";//count down 单位秒
-    public int effectTarget = 0;
+    public string atkClip = "";
+	public string hitClip = "";
+	public float hitDelay = 0.3;
+	public float knockbackDistance = 1;// 击退距离
+    public int effectTarget = 0;//目标类型
 
     public const int CASTER = 1;
     public const int TARGET = 2;
@@ -33,7 +36,7 @@ public class Skill
         monsterSkill1.atkRange = 2;
         //monsterSkill1.damage = 10;
         monsterSkill1.cd = 1;
-        monsterSkill1.clip = "attack1";
+        monsterSkill1.atkClip = "attack1";
 
         playerSkill1 = new Skill();
         playerSkill1.name = "默认技能1";
@@ -44,7 +47,7 @@ public class Skill
         playerSkill1.atkRange = 2;
         //playerSkill1.damage = 100;
         playerSkill1.cd = 1;
-        playerSkill1.clip = "attack1";
+        playerSkill1.atkClip = "attack1";
 
 
         playerSkill2 = new Skill();
@@ -56,7 +59,7 @@ public class Skill
         playerSkill2.atkRange = 2;
         //playerSkill1.damage = 100;
         playerSkill2.cd = 1;
-        playerSkill2.clip = "attack2";
+        playerSkill2.atkClip = "attack2";
 
 
         playerSkill3 = new Skill();
@@ -68,7 +71,7 @@ public class Skill
         playerSkill3.atkRange = 2;
         //playerSkill1.damage = 100;
         playerSkill3.cd = 1;
-        playerSkill3.clip = "attack3";
+        playerSkill3.atkClip = "attack3";
 
         playerSkill4 = new Skill();
         playerSkill4.name = "buff技能";
@@ -79,7 +82,7 @@ public class Skill
         playerSkill4.atkRange = 2;
         //playerSkill1.damage = 100;
         playerSkill4.cd = 1;
-        playerSkill4.clip = "punch";
+        playerSkill4.atkClip = "punch";
     }
 
     /**
@@ -103,6 +106,7 @@ public class Skill
 
         //WWW.LoadFromCacheOrDownload
         GameObject go = GameObject.Instantiate(ObjectManager.skillPrefab) as GameObject;
+		//Instantiate(Resources.Load("PrefabName"), position, rotation)  
         go.transform.parent = parent.transform;
 
     }

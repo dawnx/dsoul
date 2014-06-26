@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 /**
@@ -32,6 +32,10 @@ public abstract class AbstractAI : MonoBehaviour
     private CameraCtrl cameraCtrl;
 
     private CharacterController myController;
+
+    private bool isInRun = false;
+
+    private string currentClip;
 
     void Start () {
 
@@ -83,7 +87,6 @@ public abstract class AbstractAI : MonoBehaviour
             }
             else {
                 currentState = IDLE;
-                PlayClip("idle");
             }
         }
         else if (currentState == ATK)
@@ -105,24 +108,49 @@ public abstract class AbstractAI : MonoBehaviour
                 if (atkTarget == null || !atkTarget.ai.IsDied())
                 {
                     currentState = IDLE;
-                    PlayClip("idle");
                 }
             }
         }
     }
 
-    public virtual bool PlayClip(string clip)
+    public virtual bool PlayClip(string clip, string setClip="")
     {
         if (!gameObject.animation.IsPlaying(clip))
         {
             gameObject.animation.Stop();
             gameObject.animation.Play(clip);
+            if(setClip == "")
+                currentClip = clip;
+            else
+                currentClip = setClip;
             return true;
         }
 
         return false;
     }
 
+    public virtual void SwitchClip(string clip){
+
+        // 主要是两个地方，一个是run -> idle ，再是fight_idle状态
+        if (clip == "idle")
+        {
+            if (currentClip == "attack1" || currentClip == "attack3" || currentClip == "attack3")
+                PlayClip("fight_idle", "idle");
+            else if (currentClip == "run")
+                PlayClip("run_idle", "idle");
+            else
+                PlayClip("idle", "idle");
+        } else if (clip == "run")
+        {
+            if (currentClip == "attack1" || currentClip == "attack3" || currentClip == "attack3")
+                PlayClip("fight_run", "run");
+            else if (currentClip == "idle")
+                PlayClip("idle_run", "run");
+            else
+                PlayClip("run", "run");
+        }
+    }
+    
     public bool isInAttackArea(GameObject target, float atkRange)
     {
         float distance = Vector3.Distance(target.transform.position, transform.position);
@@ -198,7 +226,7 @@ public abstract class AbstractAI : MonoBehaviour
             if (!targetAI.IsDied())
             {
                 Skill skill = getSkill();
-                PlayClip(skill.clip);
+                PlayClip(skill.atkClip);
                 animation.PlayQueued("idle");
 
                 float delay = 0.5f;// TODO 这里的delay应该是动作播放到到受击帧的时间

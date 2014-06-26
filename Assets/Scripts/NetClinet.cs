@@ -184,8 +184,7 @@ internal class StateObject
 	public const int BufferSize = 1024;
 	public string readType = null;
 	public byte[] buffer = new byte[BufferSize];
-	public StringBuilder messageBuffer = new StringBuilder();
+	//public StringBuilder messageBuffer = new StringBuilder();
 }
 
-}
 

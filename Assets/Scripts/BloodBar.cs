@@ -21,7 +21,6 @@ public class BloodBar : MonoBehaviour {
 
     public void setParent(GameObject p) {
         this.parent = p;
-        // heroHeight = p.collider.bounds.size.y;  
         heroHeight = 0;
     }
 

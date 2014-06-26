@@ -31,7 +31,6 @@ public class CameraCtrl : MonoBehaviour
         targetposition.y += yOffset;
         targetposition.z += zOffset;
 
-        //transform.position = targetposition;//相机的目标位置,这两句代码的作用是让人物一直处于相机的视野下
 
         this.mytransform.position = Vector3.MoveTowards(this.transform.position, targetposition, Time.deltaTime * (float)this.movespeed);
     }
