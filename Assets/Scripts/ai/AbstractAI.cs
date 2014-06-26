@@ -230,7 +230,7 @@ public abstract class AbstractAI : MonoBehaviour
                 animation.PlayQueued("idle");
 
                 float delay = 0.5f;// TODO 这里的delay应该是动作播放到到受击帧的时间
-                StartCoroutine(LateAtk(atkTarget, delay, getSkill()));
+                StartCoroutine(LateAtk(atkTarget, delay, skill));
             }
 		}
 

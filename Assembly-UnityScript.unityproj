@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{FC1B9B2C-E99B-CF42-842E-D9F90DE880E5}</ProjectGuid>
+	<ProjectGuid>{B746F3A4-2F2E-2AA0-5A85-DA439CEFE925}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -46,17 +46,10 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\FT_MagicEffect_vol3\Script\DeadTime.js" />
      <Compile Include="Assets\FT_MagicEffect_vol3\Script\SampleSceneGUI.js" />
      <Compile Include="Assets\FT_MagicEffect_vol3\Script\StopCAM.js" />
      <Compile Include="Assets\FT_MagicEffect_vol3\Script\VisibleBG.js" />
-     <Compile Include="Assets\FightEffects\Scripts\Fgt_AnimSequencePlayer.js" />
-     <Compile Include="Assets\FightEffects\Scripts\Fgt_EffectOnAnim.js" />
-     <Compile Include="Assets\FightEffects\Scripts\Fgt_UVScroller.js" />
-     <Compile Include="Assets\FightEffects\Scripts\Fgt_destroyThisTimed.js" />
-     <Compile Include="Assets\FightEffects\Scripts\Fgt_materialDelayFade.js" />
-     <Compile Include="Assets\FightEffects\Scripts\Fgt_materialGradient.js" />
-     <Compile Include="Assets\FightEffects\Scripts\Fgt_rotateThis.js" />
+     <Compile Include="Assets\Resources\DeadTime.js" />
      <Compile Include="Assets\Top Down Mobile\Standard Assets\Image Effects (Pro Only)\AntialiasingAsPostEffect.js" />
      <Compile Include="Assets\Top Down Mobile\Standard Assets\Image Effects (Pro Only)\BloomAndLensFlares.js" />
      <Compile Include="Assets\Top Down Mobile\Standard Assets\Image Effects (Pro Only)\CameraInfo.js" />
@@ -146,13 +139,14 @@
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Packed.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Packed 3.shader" />
      <None Include="Assets\Top Down Mobile\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableBlur.shader" />
-     <None Include="Assets\Objects\Compressed MaskedShader2sided 5-4 cut out.shader" />
+     <None Include="Assets\model\Compressed MaskedShader2sided 5-4 cut out.shader" />
      <None Include="Assets\Top Down Mobile\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionEffect.shader" />
      <None Include="Assets\Top Down Mobile\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GrayscaleEffect.shader" />
      <None Include="Assets\Top Down Mobile\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SepiaToneEffect.shader" />
      <None Include="Assets\Top Down Mobile\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\TwirlEffect.shader" />
      <None Include="Assets\Top Down Mobile\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\VortexEffect.shader" />
      <None Include="Assets\Top Down Mobile\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Adaptation.shader" />
+     <None Include="Assets\Objects\Compressed MaskedShader2sided 5-4 cut out.shader" />
      <None Include="Assets\Top Down Mobile\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseAndGrain.shader" />
      <None Include="Assets\Top Down Mobile\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\VignettingShader.shader" />
      <None Include="Assets\Top Down Mobile\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Tonemapper.shader" />
@@ -164,6 +158,7 @@
      <None Include="Assets\NGUI\Examples\Shaders\Refractive.shader" />
      <None Include="Assets\Top Down Mobile\tools scripts\desaturate\Image Based\DesaturateEffect.shader" />
      <None Include="Assets\Top Down Mobile\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\EdgeDetectNormals.shader" />
+     <None Include="Assets\protobuf\protobuf-net.xml" />
      <None Include="Assets\Top Down Mobile\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\PrepareSunShaftsBlur.shader" />
      <None Include="Assets\Top Down Mobile\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\Blend.shader" />
      <None Include="Assets\Top Down Mobile\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\BlendModesOverlay.shader" />
@@ -175,6 +170,9 @@
      <None Include="Assets\Top Down Mobile\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\EdgeDetectX.shader" />
      <None Include="Assets\NGUI\Examples\Resources\Localization.txt" />
      <None Include="Assets\Top Down Mobile\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAAPreset2.shader" />
+ <Reference Include="protobuf-net">
+ <HintPath>Assets\protobuf\protobuf-net.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

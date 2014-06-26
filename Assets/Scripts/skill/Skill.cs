@@ -12,10 +12,10 @@ public class Skill
     public int cd = 0;//count down 单位秒
     public string atkClip = "";
 	public string hitClip = "";
-	public float hitDelay = 0.3;
+	public float hitDelay = 0.3f;
 	public float knockbackDistance = 1;// 击退距离
     public int effectTarget = 0;//目标类型
-
+    public Vector3 effectOffSet = Vector3.zero;
     public const int CASTER = 1;
     public const int TARGET = 2;
 
@@ -75,7 +75,7 @@ public class Skill
 
         playerSkill4 = new Skill();
         playerSkill4.name = "buff技能";
-        playerSkill4.effect = "";
+        playerSkill4.effect = "GroundFX_Fire01";
         playerSkill4.effectTarget = CASTER;
         playerSkill4.targetType = CharacterType.PC;
         playerSkill4.targetNumber = 1;
@@ -83,6 +83,7 @@ public class Skill
         //playerSkill1.damage = 100;
         playerSkill4.cd = 1;
         playerSkill4.atkClip = "punch";
+        playerSkill4.effectOffSet = new Vector3(0,1f,0);
     }
 
     /**
@@ -91,23 +92,32 @@ public class Skill
     public void cast(Character caster, Character target)
     {
         GameObject parent = null;
-        if (effectTarget == CASTER && caster == null) {
-            Debug.Log("effect target is CASTER, but caster is null");
-            parent = caster.gameObject;
-            return;
+        if (effectTarget == CASTER) {
+            if(caster == null){
+                Debug.Log("effect target is CASTER, but caster is null");
+                return;
+            } else 
+                parent = caster.gameObject;
+        }
+        if (effectTarget == TARGET)
+        {
+            if(target == null){
+                Debug.Log("effect target is TARGET, but TARGET is null");
+                return;
+            } else 
+                parent = target.gameObject;
         }
 
-        if (effectTarget == TARGET && target == null)
-        {
-            Debug.Log("effect target is TARGET, but TARGET is null");
-            parent = target.gameObject;
+        Debug.Log("skill atkClip :" + this.atkClip);
+        Debug.Log("skill effect :" + this.effect);
+        if (this.effect.Equals(""))
             return;
-        }
 
         //WWW.LoadFromCacheOrDownload
-        GameObject go = GameObject.Instantiate(ObjectManager.skillPrefab) as GameObject;
-		//Instantiate(Resources.Load("PrefabName"), position, rotation)  
-        go.transform.parent = parent.transform;
-
+        //GameObject go = GameObject.Instantiate(ObjectManager.skillPrefab) as GameObject;
+        Debug.Log("skill effect GroundFX_Fire01.Prefab");
+        GameObject skillEffect = GameObject.Instantiate(Resources.Load(this.effect)) as GameObject;
+        skillEffect.transform.position = parent.transform.position;
+        skillEffect.transform.position += this.effectOffSet;
     }
 }

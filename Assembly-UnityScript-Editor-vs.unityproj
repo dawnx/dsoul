@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{9D0FE499-A30F-A147-82DE-7993CD723576}</ProjectGuid>
+	<ProjectGuid>{2C1213BD-CC38-E2CD-ACBE-BDB6BA25A264}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -121,13 +121,14 @@
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Packed.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Packed 3.shader" />
      <None Include="Assets\Top Down Mobile\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableBlur.shader" />
-     <None Include="Assets\Objects\Compressed MaskedShader2sided 5-4 cut out.shader" />
+     <None Include="Assets\model\Compressed MaskedShader2sided 5-4 cut out.shader" />
      <None Include="Assets\Top Down Mobile\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionEffect.shader" />
      <None Include="Assets\Top Down Mobile\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GrayscaleEffect.shader" />
      <None Include="Assets\Top Down Mobile\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SepiaToneEffect.shader" />
      <None Include="Assets\Top Down Mobile\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\TwirlEffect.shader" />
      <None Include="Assets\Top Down Mobile\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\VortexEffect.shader" />
      <None Include="Assets\Top Down Mobile\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Adaptation.shader" />
+     <None Include="Assets\Objects\Compressed MaskedShader2sided 5-4 cut out.shader" />
      <None Include="Assets\Top Down Mobile\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseAndGrain.shader" />
      <None Include="Assets\Top Down Mobile\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\VignettingShader.shader" />
      <None Include="Assets\Top Down Mobile\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Tonemapper.shader" />
@@ -139,6 +140,7 @@
      <None Include="Assets\NGUI\Examples\Shaders\Refractive.shader" />
      <None Include="Assets\Top Down Mobile\tools scripts\desaturate\Image Based\DesaturateEffect.shader" />
      <None Include="Assets\Top Down Mobile\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\EdgeDetectNormals.shader" />
+     <None Include="Assets\protobuf\protobuf-net.xml" />
      <None Include="Assets\Top Down Mobile\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\PrepareSunShaftsBlur.shader" />
      <None Include="Assets\Top Down Mobile\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\Blend.shader" />
      <None Include="Assets\Top Down Mobile\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\BlendModesOverlay.shader" />
@@ -152,6 +154,9 @@
      <None Include="Assets\Top Down Mobile\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAAPreset2.shader" />
  <Reference Include="Assembly-UnityScript">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript.dll</HintPath>
+ </Reference>
+ <Reference Include="protobuf-net">
+ <HintPath>Assets\protobuf\protobuf-net.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>D:\Program Files (x86)\Unity\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
@@ -174,7 +179,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-vs.csproj">
-      <Project>{4BDE285D-6255-31DD-892D-5E317A962147}</Project>      <Name>Assembly-CSharp-vs</Name>    </ProjectReference>
+      <Project>{F1FA39C3-FC7A-E10D-F25E-67F910FD292C}</Project>      <Name>Assembly-CSharp-vs</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

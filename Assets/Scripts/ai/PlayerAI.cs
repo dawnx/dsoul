@@ -138,13 +138,6 @@ public class PlayerAI : AbstractAI {
         Debug.Log("skill4 click");
     }
 
-    public override bool PlayClip(string clip)
-    {
-        bool ret = base.PlayClip(clip);
-
-        return true;
-    }
-
     public override Skill getSkill() {
 
         if (currentSkill == Skill.playerSkill1)
